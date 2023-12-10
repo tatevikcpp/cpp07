@@ -30,17 +30,6 @@ Array<T>::Array(unsigned int n)
     this->_size = n;
 }
 
-// inch  vat baner klinen 
-// template<typename T> 
-// Array<T>::Array(unsigned int n)
-// {
-//     for (size_t i = 0; i < n; ++i)
-//     {
-//         this->_element = new T[i];
-//     }
-//     this->_size = n;
-// }
-
 template<typename T>
 Array<T>::Array(const Array& obj)
 {
