@@ -81,17 +81,18 @@ template<typename T>
 const T& Array<T>::operator[](unsigned int i) const
 {
     // std::cout << __PRETTY_FUNCTION__ << std::endl;
-    if (  i > this->_size - 1)
+    if (  i >= this->_size)
     {
         throw std::out_of_range ("out_of_range");
     }
     return (this->_element[i]);
 }
 
+template<typename T>
 T& Array<T>::operator[](unsigned int i)
 {
     // std::cout << __PRETTY_FUNCTION__ << std::endl;
-    if (  i > this->_size - 1)
+    if (  i >= this->_size)
     {
         throw std::out_of_range ("out_of_range");
     }
