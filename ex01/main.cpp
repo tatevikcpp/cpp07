@@ -2,9 +2,6 @@
 
 int main()
 {
-    // Coords arr_c[3];
-    // iter(arr_c, 3, &print<Coords>);
-
     std::string arr1[] = {"lalala", "lalala", "lalala"};
     iter(arr1, 3, &print<std::string>);
 
@@ -16,14 +13,7 @@ int main()
 
     char arr4[] = {'x', 'y', 'z'};
     iter(arr4, 3, &print<char>);
-
-
-    // int &a = 10;
-    // int a = 10;
-    // int &   b = a;
-    // int *c = &b;
-    // &b = a; 
-
+    
     return (0);
 }
 

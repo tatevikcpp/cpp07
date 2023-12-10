@@ -10,7 +10,8 @@ class Array
         Array(const Array& obj);
         ~Array();
         Array<T>& operator=(const Array& obj);
-        T& operator[](unsigned int i) const;
+        T& operator[](unsigned int i);
+        const T& operator[](unsigned int i) const;
         unsigned int size() const;
     private:
         unsigned int _size;
@@ -88,7 +89,17 @@ Array<T>& Array<T>::operator=(const Array& obj)
 }
 
 template<typename T>
-T& Array<T>::operator[](unsigned int i) const
+const T& Array<T>::operator[](unsigned int i) const
+{
+    // std::cout << __PRETTY_FUNCTION__ << std::endl;
+    if (  i > this->_size - 1)
+    {
+        throw std::out_of_range ("out_of_range");
+    }
+    return (this->_element[i]);
+}
+
+T& Array<T>::operator[](unsigned int i)
 {
     // std::cout << __PRETTY_FUNCTION__ << std::endl;
     if (  i > this->_size - 1)

@@ -2,8 +2,6 @@
 
 int main()
 {
-    // std::cout << "lalal\n";
-
     // Array<int> arr[5];
 
     // for (int i = 0; i < 5; ++i)
@@ -30,24 +28,26 @@ int main()
     // std::cout << "arr[0] =  "<< arr[0] <<std::endl;
     // std::cout << "size = "<< arr.size() <<std::endl;
 
-    Array<int> arr_1(50);
+    const Array<int> arr_1(50);
+    // const Array<int> arr(20);
     std::cout << "size_1 = "<< arr_1.size() <<std::endl;
-
+    arr_1[0] = 5;
+    std::cout << "size_1 = "<< arr_1[0] <<std::endl;
     // arr = arr_1;
     
-    arr_1 = arr;
-    try
-    {
-        std::cout << arr_1[52];
-    }
-    catch(const std::exception& e)
-    {
-        std::cerr << e.what() << '\n';
-    }
+    // arr_1 = arr;
+    // try
+    // {
+    //     std::cout << arr_1[52];
+    // }
+    // catch(const std::exception& e)
+    // {
+    //     std::cerr << e.what() << '\n';
+    // }
     
-    std::cout << "sizesdf = "<< arr_1.size() <<std::endl;
-    for (int i = 0; i < 5; ++i)
-    {
-        std::cout << arr_1[i];
-    }
+    // std::cout << "sizesdf = "<< arr_1.size() <<std::endl;
+    // for (int i = 0; i < 5; ++i)
+    // {
+    //     std::cout << arr_1[i];
+    // }
 }
